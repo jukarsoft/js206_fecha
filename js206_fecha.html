@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>fechas</title>
+
+	<script type="text/javascript">
+
+		//Date() tiene métodos y atributos
+		//fecha es un objeto del tipo Date
+		var fecha = new Date();
+		document.write(fecha);
+		document.write('<br>')
+		document.write('mes ' + fecha.getMonth());
+		document.write('<br>')
+		document.write('numero del dia del mes ' + fecha.getDate());
+		document.write('<br>')
+		document.write('Número de dia de la semana ' + fecha.getDay());
+		document.write('<br>')
+		document.write('Año ' + fecha.getFullYear())
+		document.write('<br>')
+		
+		document.write('Hora del día ' +fecha.getHours())
+		document.write('<br>')
+		document.write('Minuto ' + fecha.getMinutes())
+		document.write('<br> ')
+		document.write('Segundos' + fecha.getSeconds())
+		document.write('<br>')
+		document.write('Milisegundos ' + fecha.getMilliseconds())
+		document.write('<br>')
+		document.write('milisegundos transcurridos desde 1/1/1970 ' + fecha.getTime())
+		document.write('<br>')
+		
+		//setter   cambia fecha (atributo año)
+		fecha.setFullYear(2020);
+		document.write(fecha);
+		document.write('<br>')
+
+		var fechaHoy = new Date()
+		fechaHoy.setMonth(fechaHoy.getMonth()+1)
+		fechaHoy.setFullYear(fechaHoy.getFullYear()-1)
+		document.write(fechaHoy);
+		document.write('<br>')
+
+
+		//calcular diferencia entre dos fechas
+		fechaActual = new Date();
+		fechaDesde = new Date();
+		fechaDesde.setFullYear(2000);
+		fechaDesde.setMonth(0)
+		fechaDesde.setDate(1)
+		fechaDesde.setHours(0)
+		fechaDesde.setMinutes(0)
+		fechaDesde.setSeconds(0)
+		document.write(fechaActual)
+		document.write('<br>')
+		document.write(fechaDesde)
+		document.write('<br>')
+		// 1000/3600/24  getTime obtiene milisegundos                          1s   1h  1d 1m 1y
+		var diferenciaDias = (fechaActual.getTime() - fechaDesde.getTime()) / 1000/3600/24/30/12 
+		document.write(diferenciaDias)
+		document.write('<br>')
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>
